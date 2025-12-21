@@ -1,0 +1,2 @@
+_target_: datasets.SampleDataset
+invert_sign: True

@@ -1,0 +1,3 @@
+_target_: models.SampleModel
+input_dim: 1
+output_dim: 1

@@ -1,0 +1,33 @@
+# General Hydra configurations
+
+defaults:  
+  - _self_ 
+  # default configs for dataset and model - uncomment when decided
+  # - dataset: sample_dataset
+  # - model: sample_model
+  # disable hydra logging 
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+
+hydra:  
+  output_subdir: null
+  run:  
+    dir: .
+
+# General training settings
+
+setup:
+  save_dir: experiments
+  wandb:
+    entity: tum-ai
+    project: sample
+    # tags: ['sample_tag', 'debug']
+  seed: 42
+
+training:
+  batch_size: 1
+  max_epochs: 20
+  num_workers: 3
+  checkpoint_every_n_epochs: 1
+  save_on_end: True
+  save_last: True 
